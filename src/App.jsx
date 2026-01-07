@@ -7,6 +7,7 @@ import Cart from './pages/Cart';
 import ProductDetails from './pages/ProductDetails';
 import Login from './components/Login';
 import { useAppContext } from './context/AppContext';
+import Footer from './components/Footer';
 
 const App = () => {
   const {showUserLogin} = useAppContext()
@@ -26,6 +27,7 @@ const App = () => {
         </Routes>
 
       </div>
+      {!isSellerPath && <Footer/>}
     </div>
   )
 }
